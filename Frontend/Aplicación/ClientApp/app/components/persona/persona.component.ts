@@ -1,11 +1,23 @@
-import { Component, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component, Inject, OnInit } from '@angular/core';
+import { ApiService } from '../../shared/services/api.service';
 
 @Component({
-    selector: 'fetchdata',
-    templateUrl: './fetchdata.component.html'
+    selector: 'persona',
+    templateUrl: './persona.component.html'
 })
-export class PersonaComponent {
- 
+export class PersonaComponent implements OnInit {
+
+    id: number = 0;
+
+    constructor(public api: ApiService) { }
+
+    ngOnInit() {
+        this.api.getAllUsers()
+            .subscribe(x => x);
+    }
+
+    eliminarPersona() {
+        this.api.deleteUser(this.id).subscribe();
+    }
 }
 
