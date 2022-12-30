@@ -8,31 +8,23 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class PersonaCreacionComponent {
 
-    crearPersonaForm: FormGroup;
-
     userModel = {
-        name:'x', cel:1, direccion:'x', 
+        nombre: 'x', cedula: 0, fecha: 'x', telefono: 0, direccion: "x" 
           }
 
     constructor(public api: ApiService) {
-        this.crearPersonaForm = new FormGroup({
-            nombre: new FormControl(),
-            cedula: new FormControl(),
-            fecha: new FormControl(),
-            telefono: new FormControl(),
-            direccion: new FormControl()
-        })
+      
     }
 
 
     crearPersona() {
 
         this.api.createUser({
-            nombre: this.crearPersonaForm.value.nombre,
-            cedula: this.crearPersonaForm.value.cedula,
-            fecha: this.crearPersonaForm.value.fecha,
-            telefono: this.crearPersonaForm.value.telefono,
-            direccion: this.crearPersonaForm.value.direccion
+            nombre: this.userModel.nombre,
+            cedula: this.userModel.cedula,
+            fecha: this.userModel.fecha,
+            telefono: this.userModel.telefono,
+            direccion: this.userModel.direccion
         })
             .subscribe();
     }

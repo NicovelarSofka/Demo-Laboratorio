@@ -1,35 +1,36 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ApiService } from '../../shared/services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'personamodificacion',
     templateUrl: './personamodificacion.component.html'
 })
-export class PersonaModificacionComponent {
+export class PersonaModificacionComponent implements OnInit {
 
-    modificarPersonaForm: FormGroup;
+    userModel:any
+
     id: number = 0;
 
-    constructor(public api: ApiService) {
-        this.modificarPersonaForm = new FormGroup({
-            nombre: new FormControl(),
-            cedula: new FormControl(),
-            fecha: new FormControl(),
-            telefono: new FormControl(),
-            direccion: new FormControl()
-        })
+    constructor(public api: ApiService, private route: ActivatedRoute) {
+      
     }
 
+    ngOnInit() {
+        this.userModel = this.api.getAllUsers().filter((persona) => {
+           return persona.Id == this.route.snapshot.params.id
+        })[0]
+    }
 
     modificarPersona() {
 
         this.api.updateUser(this.id, {
-            nombre: this.modificarPersonaForm.value.nombre,
-            cedula: this.modificarPersonaForm.value.cedula,
-            fecha: this.modificarPersonaForm.value.fecha,
-            telefono: this.modificarPersonaForm.value.telefono,
-            direccion: this.modificarPersonaForm.value.direccion
+            nombre: this.userModel.nombre,
+            cedula: this.userModel.cedula,
+            fecha: this.userModel.fecha,
+            telefono: this.userModel.telefono,
+            direccion: this.userModel.direccion
         })
             .subscribe();
     }

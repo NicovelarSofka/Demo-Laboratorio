@@ -1,32 +1,33 @@
 <h1>Personas Modificacion</h1>
 
 
-<form [formGroup]="modificarPersonaForm" (ngSubmit)="modificarPersona()">
+<form #userForm="ngForm">
 
-    <!--Input Nombre-->
-    <!--<mat-form-field class="nombre" appearance="outline">
-        <mat-label class="labelInput">Nombre</mat-label>
-        <input matInput type="text" formControlName="nombre">
-    </mat-form-field>-->
-    <!--Input Cedula-->
-    <!--<mat-form-field class="cedula" appearance="outline">
-        <mat-label class="labelInput">Cédula</mat-label>
-        <input matInput type="text" formControlName="cedula">
-    </mat-form-field>-->
-    <!--Input Fecha de Nacimiento-->
-    <!--<mat-form-field class="fecha" appearance="outline">
-        <mat-label class="labelInput">Fecha Nacimiento</mat-label>
-        <input matInput type="text" formControlName="fecha">
-    </mat-form-field>-->
-    <!--Input Telefono-->
-    <!--<mat-form-field class="telefono" appearance="outline">
-        <mat-label class="labelInput">Teléfono</mat-label>
-        <input matInput type="text" formControlName="telefono">
-    </mat-form-field>-->
-    <!--Input Dirección-->
-    <!--<mat-form-field class="direccion" appearance="outline">
-        <mat-label class="labelInput">Dirección</mat-label>
-        <input matInput type="text" formControlName="direccion">
-    </mat-form-field>-->
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" value={{userModel.Nombre}} />
+    </div>
+
+    <div class="form-group">
+        <label>Cedula</label>
+        <input type="text" class="form-control" name="cedula" value={{userModel.Cedula}} />
+    </div>
+
+    <div class="form-group">
+        <label>Fecha</label>
+        <input type="text" class="form-control" name="fecha" value={{userModel.Fecha}} />
+    </div>
+
+    <div class="form-group">
+        <label>Telefono</label>
+        <input type="text" class="form-control" name="telefono" value={{userModel.Telefono}} />
+    </div>
+
+    <div class="form-group">
+        <label>Direccion</label>
+        <input type="text" class="form-control" name="direccion" value={{userModel.Direccion}} />
+    </div>
+
+    <button type="submit">Submit </button>
 
 </form>

@@ -3,22 +3,29 @@
 
 <form #userForm="ngForm">
 
-    {{userForm.value | json}}
-    {{userModel | json}}
-
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" class="form-control" name="nombre" [ngModel]="userModel.name" />
+        <input type="text" class="form-control" name="nombre" />
     </div>
 
     <div class="form-group">
-        <label>Celular</label>
-        <input type="text" class="form-control" name="celular" [ngModel]="userModel.cel" />
+        <label>Cedula</label>
+        <input type="text" class="form-control" name="cedula" />
+    </div>
+
+    <div class="form-group">
+        <label>Fecha</label>
+        <input type="text" class="form-control" name="fecha" />
+    </div>
+
+    <div class="form-group">
+        <label>Telefono</label>
+        <input type="text" class="form-control" name="telefono" />
     </div>
 
     <div class="form-group">
         <label>Direccion</label>
-        <input type="text" class="form-control" name="direccion" [ngModel]="userModel.direccion" />
+        <input type="text" class="form-control" name="direccion" />
     </div>
 
     <button type="submit">Submit </button>

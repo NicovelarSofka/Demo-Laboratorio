@@ -8,10 +8,10 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { PersonaComponent } from './components/persona/persona.component';
 import { ApiService } from './shared/services/api.service';
 import { PersonaCreacionComponent } from './components/personacreacion/personacreacion.component';
 import { PersonaModificacionComponent } from './components/personamodificacion/personamodificacion.component';
+import { PersonaTablaComponent } from './components/personatabla/personatabla.component';
 
 
 @NgModule({
@@ -21,9 +21,9 @@ import { PersonaModificacionComponent } from './components/personamodificacion/p
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
-        PersonaComponent,
         PersonaCreacionComponent,
         PersonaModificacionComponent,
+        PersonaTablaComponent,
         
     ],
     imports: [
@@ -36,9 +36,9 @@ import { PersonaModificacionComponent } from './components/personamodificacion/p
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-            { path: 'persona', component: PersonaComponent },
             { path: 'personacreacion', component: PersonaCreacionComponent },
             { path: 'personamodificacion/:id', component: PersonaModificacionComponent },
+            { path: 'personatabla', component: PersonaTablaComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ],
