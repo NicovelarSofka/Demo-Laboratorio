@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KENnb6gu6p2rHK9C4ddNU5bb5hIyl4nJlA0E4lTuogtfDr4HRHgbLP6PkVv0y/X4C6uBUccb1TFtEkoY6lsVTg==",
+  "dgSpecHash": "YvKrripH8eD7nGXmDs7Idtj6zVHf1jU+ym9YuKkGcC/Z8D0/5nr6nTVNpWUrKuNU5IdAMSU74Xccs6EbZyhxCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicov\\Desktop\\Demo Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicov\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

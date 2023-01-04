@@ -40,7 +40,7 @@ export class ApiService {
                 }
             ]        
         return users
-        /*return this.http.get ( "endpoint" );*/
+        /*return this.http.get ( "api/v1/[controller]" );*/
     }
 
     createUser( command: CrearPersona ) {

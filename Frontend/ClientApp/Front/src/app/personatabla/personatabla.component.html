@@ -1,0 +1,57 @@
+<h1>Personas</h1>
+
+<a routerLink='/personacreacion'>
+    <button>
+        Crear Persona
+    </button>
+</a>
+
+<table class='table'>
+    <ng-container *ngFor="let persona of personas">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Correo</th>
+                <th>Fecha</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{persona.PrimerNombre}}
+                </td>
+                <td>
+                    {{persona.PrimerApellido}}
+                </td>
+                <td>
+                    {{persona.Telefono}}
+                </td>
+                <td>
+                    {{persona.Direccion}}
+                </td>
+                <td>
+                    {{persona.Correo}}
+                </td>
+                <td>
+                  {{persona.FechaNacimiento}}
+              </td>
+                <td>
+                    <a routerLink='/personamodificacion/{{persona.Id}}'>
+                        Modificar
+                    </a>
+                </td>
+                <td>
+                    <button ng-click=`eliminar(persona.Id)`>
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </ng-container>
+</table>
+

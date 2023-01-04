@@ -16,7 +16,9 @@ namespace Aplicación.Controllers
         public IEnumerable<Usuarios> ObtenerUsarios()
         {
             return new RepositorioUsuarios().ObtenerUsuarios();
-
+            //return new List<Usuarios>() { new Usuarios {  PrimerNombre = "Juan" , PrimerApellido = "Rodriguez"  ,Correo = "Gmail.com"  } };
         }
+
+        
     }
 }

@@ -9,9 +9,21 @@ namespace Data
     {
         public IEnumerable<Usuarios> ObtenerUsuarios()
         {
+            var usuarios = new List<Usuarios>();
+
             using (var db = new LaboratorioContext())
             {
-                return db.Usuarios.ToList();
+                try
+                {
+                    usuarios = db.Usuarios.ToList();
+                }
+                catch (Exception x)
+                {
+
+                    throw x;
+                }
+                
+                return usuarios;
             }
         }
     }
