@@ -23,6 +23,14 @@ namespace Aplicación
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "policy",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +47,7 @@ namespace Aplicación
             }
 
             app.UseStaticFiles();
+            app.UseMigrationsEndPoint
 
             app.UseMvc(routes =>
             {
