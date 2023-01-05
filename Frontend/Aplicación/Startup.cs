@@ -47,7 +47,6 @@ namespace Aplicación
             }
 
             app.UseStaticFiles();
-            app.UseMigrationsEndPoint
 
             app.UseMvc(routes =>
             {
