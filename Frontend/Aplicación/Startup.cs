@@ -25,11 +25,13 @@ namespace Aplicación
             services.AddMvc();
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "policy",
-                    builder =>
-                    {
-                        builder.AllowAnyOrigin();
-                    });
+                options.AddPolicy(name: "AllowOrigin",
+         builder =>
+         {
+             builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+         });
             });
         }
 
@@ -39,7 +41,7 @@ namespace Aplicación
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-           
+
             }
             else
             {
@@ -47,7 +49,9 @@ namespace Aplicación
             }
 
             app.UseStaticFiles();
-
+            app.UseCors(
+                options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+            );
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
