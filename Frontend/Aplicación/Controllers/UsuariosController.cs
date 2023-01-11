@@ -21,7 +21,7 @@ namespace Aplicación.Controllers
 
 
         [Microsoft.AspNetCore.Mvc.HttpPost("GuardarUsuario")]
-        public bool GuardarUsuario(Usuarios usuarios)
+        public bool GuardarUsuario([FromBody] Usuarios usuarios)
         {
             return new RepositorioUsuarios().GuardarUsuario(usuarios);
         }
