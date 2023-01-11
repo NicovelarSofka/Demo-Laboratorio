@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ColDef, IAfterGuiAttachedParams, ICellRendererParams } from 'ag-grid-community';
 import { ApiService } from '../shared/services/api.service';
 
 @Component({
@@ -7,23 +7,42 @@ import { ApiService } from '../shared/services/api.service';
   templateUrl: './personatabla.component.html',
   styleUrls: ['./personatabla.component.css']
 })
-export class PersonaTablaComponent implements OnInit  {
+export class PersonaTablaComponent implements OnInit {
 
-  personas:any
+  @Input() cell: any;
+  @Output() onClicked = new EventEmitter<boolean>();
+  
+  rowData = [];
+
+  columnDefs: ColDef[] = [
+    { width: 600, resizable: true, field: 'Nombre' },
+    { width: 175, resizable: true, field: 'Apellido' },
+    { width: 175, field: 'Telefono' },
+    { width: 175, field: 'Direccion' },
+    { width: 175, field: 'Correo' },
+    { width: 175, field: 'Fecha' },
+];
+
 
   constructor(public api: ApiService) {
-    
+   
   }
 
-  ngOnInit() {
+   ngOnInit() {
 
-  //  this.api.getAllUsers().subscribe(users => { 
-  //   this.personas = users
-  //   })
+    this.api.getAllUsers().subscribe(users => {
+      this.rowData = users.json()
+    })  
 
-  this.personas = this.api.getAllUsers();
-  console.log(this.personas)
-  }
+  
+}
+
+modificarbutton() {
+  
+  const anchor = '<button style="height: 21px" (click)="click()" class="btn btn-info">Click Me</button>'
+  return anchor
+}
+
 
   modificar(id:number) {
 
@@ -35,6 +54,9 @@ export class PersonaTablaComponent implements OnInit  {
   }
 
  
+
+
+
 }
 
  

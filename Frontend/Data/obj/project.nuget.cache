@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T2w6JxWF7ZIrNVSEUwrR6FF82rPcJacrb3M6PLPNaK1Ms/b+KPwvNrrOyQgYaCIXjNpLf3nO0jQ8S6dWDu4C7A==",
+  "dgSpecHash": "6pTJLbClUHO79wlQ1U7J/oO8ZjbIMEZfRAQ8jajembRMdAQWI3We/5NwqGC9BwkaQPoVMC4ROOQ/Jhk3o0MjHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
+  "projectFilePath": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicov\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\nicov\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

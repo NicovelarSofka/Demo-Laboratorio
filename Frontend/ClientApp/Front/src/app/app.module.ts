@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing-module';
+import { AgGridModule } from 'ag-grid-angular';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,10 @@ import { AppRoutingModule } from './app-routing-module';
   imports: [
     CommonModule,
     HttpModule,
+    AgGridModule.withComponents(
+      [
+      PersonaTablaComponent,
+      ]),
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,

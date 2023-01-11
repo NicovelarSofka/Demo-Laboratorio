@@ -18,22 +18,65 @@ export class PersonaModificacionComponent implements OnInit {
   }
 
   ngOnInit() {
-      // this.userModel = this.api.getAllUsers().filter((persona) => {
-      //    return persona.Id == this.route.snapshot.params.id
-      // })[0]
+
+      this.api.getAllUsers().subscribe(users => {
+        this.userModel = users.json().filter((persona) => {
+          return persona.id == this.route.snapshot.params.id
+        })[0]
+      })  
+      
+   
   }
 
-  modificarPersona() {
+  
+  mostrame() {
+    console.log("hola")
+  }
+  
 
-      this.api.updateUser(this.id, {
-          nombre: this.userModel.PrimerNombre,
-          cedula: this.userModel.cedula,
-          fecha: this.userModel.fecha,
-          telefono: this.userModel.telefono,
-          direccion: this.userModel.direccion
+
+  modificarPersona(data) {
+
+    if (data.nombre === '') {
+      data.nombre = this.userModel.primerNombre
+    }
+
+    if (data.apellido === '') {
+      data.apellido = this.userModel.primerApellido
+    }
+
+    if (data.telefono === '') {
+      data.telefono = this.userModel.telefono
+    }
+
+    if (data.direccion === '') {
+      data.direccion = this.userModel.direccion
+    }
+
+    if (data.correo === '') {
+      data.correo = this.userModel.correo
+    }
+
+    if (data.fecha === '') {
+      data.fecha = this.userModel.fechaNacimiento
+    }
+
+      this.api.updateUser(this.route.snapshot.params.id, {
+          primerNombre: data.nombre,
+          primerApellido: data.apellido,
+          telefono: data.telefono,
+          direccion: data.direccion,
+          correo: data.correo,
+          fechaNacimiento: data.fecha
       })
           .subscribe();
   }
+
+
+  
+
+
+
 }
 
 

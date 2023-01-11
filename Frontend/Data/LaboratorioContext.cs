@@ -29,7 +29,7 @@ namespace Data
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.Property(e => e.FechaNacimiento).HasColumnType("datetime");
+                entity.Property(e => e.FechaNacimiento);
 
                 entity.Property(e => e.Identificacion)
                     .IsRequired()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj": {}
+    "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\BusinessLogic\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\nicov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

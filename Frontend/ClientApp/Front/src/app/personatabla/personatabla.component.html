@@ -6,52 +6,57 @@
     </button>
 </a>
 
-<table class='table'>
-    <ng-container *ngFor="let persona of personas">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Telefono</th>
-                <th>Direccion</th>
-                <th>Correo</th>
-                <th>Fecha</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    {{persona.PrimerNombre}}
-                </td>
-                <td>
-                    {{persona.PrimerApellido}}
-                </td>
-                <td>
-                    {{persona.Telefono}}
-                </td>
-                <td>
-                    {{persona.Direccion}}
-                </td>
-                <td>
-                    {{persona.Correo}}
-                </td>
-                <td>
-                  {{persona.FechaNacimiento}}
-              </td>
-                <td>
-                    <a routerLink='/personamodificacion/{{persona.Id}}'>
-                        Modificar
-                    </a>
-                </td>
-                <td>
-                    <button ng-click=`eliminar(persona.Id)`>
-                        Eliminar
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </ng-container>
-</table>
+<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-balham"
+[gridOptions]="gridOptions"
+[sideBar]="showToolPanel"
+[rowData]="rowData">
 
+<ag-grid-column headerName="Nombre"  field="primerNombre" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"></ag-grid-column>
+
+<ag-grid-column headerName="Apellido" field="primerApellido" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Telefono" field="telefono" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Direccion" field="direccion" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Correo" field="correo" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Fecha" field="fechaNacimiento" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+
+
+
+</ag-grid-angular>
+
+
+
+
+<ng-template ngFor let-item [ngForOf]="rowData" let-i="index" [ngForTrackBy]="trackByFn">
+    <a href= "personamodificacion/{{item.id}}">Modifica a {{item.primerNombre}}</a> <br> <br>
+</ng-template>
+
+
+
+
+
+<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-balham"
+[gridOptions]="gridOptions"
+[sideBar]="showToolPanel"
+[rowData]="rowData">
+
+<ag-grid-column headerName="Apellido" field="primerApellido" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Nombre"  field="primerNombre" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"></ag-grid-column>
+
+<ag-grid-column headerName="Telefono" field="telefono" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Direccion" field="direccion" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Correo" field="correo" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+<ag-grid-column headerName="Fecha" field="fechaNacimiento" [width]="150"  [sortable]="true" [resizable]="true" [filter]="true"> </ag-grid-column>
+
+
+
+
+</ag-grid-angular>

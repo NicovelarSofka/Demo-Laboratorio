@@ -1,8 +1,12 @@
+import { DatePipe, Time } from "@angular/common";
+
 export interface CrearPersona {
-    nombre: string;
-    cedula: number;
-    fecha: string;
-    telefono: number;
+    identificacion: string;
+    primerNombre: string;
+    primerApellido: string;
+    telefono: string;
     direccion: string;
+    correo: string;
+    fechaNacimiento: string;
 }
 

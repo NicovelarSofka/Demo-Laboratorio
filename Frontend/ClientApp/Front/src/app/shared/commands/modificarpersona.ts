@@ -1,8 +1,9 @@
 export interface ModificarPersona {
-    nombre: string;
-    cedula: number;
-    fecha: string;
-    telefono: number;
+    primerNombre: string;
+    primerApellido: string;
+    telefono: string;
     direccion: string;
+    correo: string
+    fechaNacimiento: string;
 }
 

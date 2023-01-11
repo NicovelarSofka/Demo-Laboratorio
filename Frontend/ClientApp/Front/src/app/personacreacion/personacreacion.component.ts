@@ -8,25 +8,23 @@ import { ApiService } from '../shared/services/api.service';
 })
 export class PersonaCreacionComponent {
 
-  userModel = {
-      nombre: 'x', cedula: 0, fecha: 'x', telefono: 0, direccion: "x" 
-        }
-
   constructor(public api: ApiService) {
-    
   }
 
 
-  crearPersona() {
+  crearPersona(data) {
 
       this.api.createUser({
-          nombre: this.userModel.nombre,
-          cedula: this.userModel.cedula,
-          fecha: this.userModel.fecha,
-          telefono: this.userModel.telefono,
-          direccion: this.userModel.direccion
+        identificacion: data.identificacion,
+        primerNombre: data.nombre,
+        primerApellido: data.apellido,
+        telefono: data.telefono,
+        direccion: data.direccion,
+        correo: data.correo,
+        fechaNacimiento: data.fecha
       })
           .subscribe();
   }
+
 }
 

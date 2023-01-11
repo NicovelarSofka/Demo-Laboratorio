@@ -1,33 +1,39 @@
 <h1>Personas Modificacion</h1>
 
-
-<form>
+<form #user = "ngForm" (ngSubmit) = "modificarPersona(user.value)">
 
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" class="form-control" name="nombre" value={{userModel.PrimerNombre}} />
+        <input type="text" class="form-control" name="nombre" value={{userModel.primerNombre}} ngModel/>
     </div>
 
     <div class="form-group">
-        <label>Cedula</label>
-        <input type="text" class="form-control" name="cedula" value={{userModel.Cedula}} />
-    </div>
-
-    <div class="form-group">
-        <label>Fecha</label>
-        <input type="text" class="form-control" name="fecha" value={{userModel.Fecha}} />
+        <label>Apellido</label>
+        <input type="text" class="form-control" name="apellido" value={{userModel.primerApellido}} ngModel/>
     </div>
 
     <div class="form-group">
         <label>Telefono</label>
-        <input type="text" class="form-control" name="telefono" value={{userModel.Telefono}} />
+        <input type="text" class="form-control" name="telefono" value={{userModel.telefono}} ngModel/>
     </div>
 
     <div class="form-group">
         <label>Direccion</label>
-        <input type="text" class="form-control" name="direccion" value={{userModel.Direccion}} />
+        <input type="text" class="form-control" name="direccion" value={{userModel.direccion}} ngModel/>
+    </div>
+
+    <div class="form-group">
+        <label>Correo</label>
+        <input type="text" class="form-control" name="correo" value={{userModel.correo}} ngModel/>
+    </div>
+
+    <div class="form-group">
+        <label>Fecha</label>
+        <input type="text" class="form-control" name="fecha" value={{userModel.fechaNacimiento}} ngModel/>
     </div>
 
     <button type="submit">Submit </button>
 
 </form>
+
+

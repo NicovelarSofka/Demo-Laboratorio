@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj": {}
+    "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj": {
+    "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\nicov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicov\\Desktop\\Lab\\Demo-Laboratorio\\Frontend\\Data\\obj\\",
+        "outputPath": "C:\\Users\\nicov\\Desktop\\Laboratorio\\Demo-Laboratorio\\Frontend\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
