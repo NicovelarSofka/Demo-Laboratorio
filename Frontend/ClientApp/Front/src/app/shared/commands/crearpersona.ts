@@ -6,7 +6,7 @@ export interface CrearPersona {
     primerApellido: string;
     telefono: string;
     direccion: string;
-    correo: string;
+    correo: string
     fechaNacimiento: string;
 }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { timeout } from 'rxjs/operators';
 import { ApiService } from '../shared/services/api.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { ApiService } from '../shared/services/api.service';
 })
 export class PersonaCreacionComponent {
 
-  constructor(public api: ApiService) {
+  constructor(public api: ApiService, private router: Router) {
   }
 
 
@@ -24,6 +26,12 @@ export class PersonaCreacionComponent {
         fechaNacimiento: data.fecha
       })
           .subscribe();
+
+      setTimeout(() => {
+        this.router.navigate(['/personatabla']);
+      }, 500);
+
+        
   }
 
 }

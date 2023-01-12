@@ -15,7 +15,7 @@ export class ApiService {
     }
 
     createUser( command: CrearPersona ) {
-        return this.http.post ( "http://localhost:54384/api/v1/Usuarios/GuardarUsuario", command )
+        return this.http.post ( "http://localhost:54384/api/v1/Usuarios/GuardarUsuario",command )
     }
 
     updateUser( id: number, command: ModificarPersona ) {

@@ -3,6 +3,11 @@
 <form #user = "ngForm" (ngSubmit) = "modificarPersona(user.value)">
 
     <div class="form-group">
+        <label>Identificacion</label>
+        <input type="text" class="form-control" name="identificacion" value={{userModel.identificacion}} ngModel/>
+    </div>
+
+    <div class="form-group">
         <label>Nombre</label>
         <input type="text" class="form-control" name="nombre" value={{userModel.primerNombre}} ngModel/>
     </div>

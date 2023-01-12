@@ -27,15 +27,12 @@ export class PersonaModificacionComponent implements OnInit {
       
    
   }
-
   
-  mostrame() {
-    console.log("hola")
-  }
-  
-
-
   modificarPersona(data) {
+
+    if (data.identificacion === '') {
+      data.identificacion = this.userModel.identificacion
+    }
 
     if (data.nombre === '') {
       data.nombre = this.userModel.primerNombre
@@ -62,6 +59,7 @@ export class PersonaModificacionComponent implements OnInit {
     }
 
       this.api.updateUser(this.route.snapshot.params.id, {
+          identificacion: data.identificacion,
           primerNombre: data.nombre,
           primerApellido: data.apellido,
           telefono: data.telefono,
